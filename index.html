@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NDIS Services Australia</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>NDIS Services Australia</h1>
+        <nav>
+            <ul class="tabs">
+                <li class="tab active" onclick="showTab('home')">Home</li>
+                <li class="tab" onclick="showTab('personal')">Personal Care</li>
+                <li class="tab" onclick="showTab('community')">Community Access</li>
+                <li class="tab" onclick="showTab('support')">Support Coordination</li>
+                <li class="tab" onclick="showTab('contact')">Contact</li>
+            </ul>
+        </nav>
+        <button class="theme-toggle" onclick="toggleTheme()" aria-label="Switch theme"><span id="theme-icon">🌙</span></button>
+        <button class="hamburger" onclick="toggleMenu()" aria-label="Open menu">&#9776;</button>
+    </header>
+    <main id="main-content">
+        <!-- Tab content will be loaded here dynamically -->
+    </main>
+    <footer>
+        <p>&copy; 2025 NDIS Services Australia</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
