@@ -4,8 +4,17 @@ function showTab(tabId) {
     // Add active class to selected tab
     const tabElement = document.querySelector(`.tab[onclick*='${tabId}']`);
     if (tabElement) tabElement.classList.add('active');
-    // Load tab content from external file
-    fetch(`/${tabId}.html`)
+    // Compute base path for fetching tab content
+    let base = '';
+    if (window.location.hostname.endsWith('github.io')) {
+        // For GitHub Pages, get the repo name from the path
+        const pathParts = window.location.pathname.split('/').filter(Boolean);
+        if (pathParts.length > 0) {
+            base = '/' + pathParts[0] + '/';
+        }
+    }
+    // Load tab content from external file (base + relative path)
+    fetch(`${base}${tabId}.html`)
         .then(response => {
             if (!response.ok) throw new Error('File not found');
             return response.text();
@@ -16,6 +25,15 @@ function showTab(tabId) {
             tempDiv.innerHTML = html;
             tempDiv.querySelectorAll('.tab-content').forEach(section => section.classList.remove('active'));
             document.getElementById('main-content').innerHTML = tempDiv.innerHTML;
+            // Setup dots for horizontal scrolls if present
+            setTimeout(() => {
+                if (document.getElementById('community-scroll')) {
+                    setupDots('community-scroll', 'community-scroll-dots');
+                }
+                if (document.getElementById('community-scroll2')) {
+                    setupDots('community-scroll2', 'community-scroll2-dots');
+                }
+            }, 100);
         })
         .catch(() => {
             document.getElementById('main-content').innerHTML = '<section><h2>Content not found</h2></section>';
@@ -82,7 +100,6 @@ function updateDots(rowId, dotsId) {
     });
 }
 
-// ...existing code...
 function scrollRow(rowId, direction) {
     const row = document.getElementById(rowId);
     if (row) {
