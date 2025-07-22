@@ -1,6 +1,6 @@
 <section id="contact" class="tab-content">
-    <h2>Contact Us</h2>
-    <p>We'd love to hear from you! Fill out the form below and we'll get back to you soon.</p>
+    <h2 class="section-title">Contact SEMS NDIS Services</h2>
+    <p>We'd love to hear from you! Whether you're seeking services, making a referral, or looking for career opportunities, we're here to help.</p>
     <form action="YOUR_GOOGLE_FORM_POST_URL" method="POST" target="_blank" class="contact-form">
         <label for="name">Name</label>
         <input type="text" id="name" name="entry.YOUR_NAME_FIELD" required>
@@ -11,64 +11,35 @@
         <button type="submit">Send Message</button>
     </form>
     <div class="form-note">* Your information will be sent securely to our team.</div>
-    <!-- Horizontally scrollable row -->
-    <div class="horizontal-scroll">
-        <button class="scroll-btn left" onclick="scrollRow('contact-scroll', -1)">&#8592;</button>
-        <div class="scroll-row" id="contact-scroll">
-            <div class="scroll-item" style="background-image:url('https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=400&q=80')">
-                <h3>Email Us</h3>
-                <p>info@ndis-services.com.au</p>
-            </div>
-            <div class="scroll-item" style="background-image:url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80')">
-                <h3>Call Us</h3>
-                <p>1800 000 000</p>
-            </div>
-            <div class="scroll-item" style="background-image:url('https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=400&q=80')">
-                <h3>Visit Us</h3>
-                <p>123 Main St, Melbourne VIC</p>
-            </div>
+    <!-- Simple contact information cards -->
+    <div class="contact-info-grid">
+        <div class="contact-card">
+               <div class="contact-icon" aria-label="Email" style="display:inline-block;vertical-align:middle;">
+                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2a4d8f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="22,6 12,13 2,6"/></svg>
+               </div>
+            <h3>Email Us</h3>
+            <p>support@semsndis.com.au</p>
         </div>
-        <button class="scroll-btn right" onclick="scrollRow('contact-scroll', 1)">&#8594;</button>
-    </div>
-    <!-- Vertically separated sections -->
-    <div class="vertical-sections">
-        <div class="vertical-item" style="background-image:url('https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80')">
+        <div class="contact-card">
+               <div class="contact-icon" aria-label="Phone" style="display:inline-block;vertical-align:middle;">
+                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2a4d8f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92V21a2 2 0 0 1-2.18 2A19.72 19.72 0 0 1 3 5.18 2 2 0 0 1 5 3h4.09a2 2 0 0 1 2 1.72c.13 1.23.37 2.42.72 3.57a2 2 0 0 1-.45 2.11l-1.27 1.27a16 16 0 0 0 6.29 6.29l1.27-1.27a2 2 0 0 1 2.11-.45c1.15.35 2.34.59 3.57.72A2 2 0 0 1 21 18.91V21z"></path></svg>
+               </div>
+            <h3>Call Us</h3>
+            <p>1300 XXX XXX</p>
+        </div>
+        <div class="contact-card">
+               <div class="contact-icon" aria-label="Location" style="display:inline-block;vertical-align:middle;">
+                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2a4d8f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 1 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+               </div>
+            <h3>Visit Us</h3>
+            <p>9 Abbin Court<br>Rowville VIC 3178</p>
+        </div>
+        <div class="contact-card">
+               <div class="contact-icon" aria-label="Clock" style="display:inline-block;vertical-align:middle;">
+                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2a4d8f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+               </div>
             <h3>Office Hours</h3>
-            <p>Mon-Fri: 9am - 5pm</p>
-        </div>
-        <div class="vertical-item" style="background-image:url('https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=400&q=80')">
-            <h3>Feedback & Support</h3>
-            <p>We're here to help with any questions or concerns.</p>
-        </div>
-    </div>
-    <!-- Repeat: Horizontally scrollable row -->
-    <div class="horizontal-scroll">
-        <button class="scroll-btn left" onclick="scrollRow('contact-scroll2', -1)">&#8592;</button>
-        <div class="scroll-row" id="contact-scroll2">
-            <div class="scroll-item" style="background-image:url('https://images.unsplash.com/photo-1465101178521-c1a9136a3b99?auto=format&fit=crop&w=400&q=80')">
-                <h3>NDIS Help</h3>
-                <p>Guidance on accessing and using your NDIS plan.</p>
-            </div>
-            <div class="scroll-item" style="background-image:url('https://images.unsplash.com/photo-1502082553048-f009c37129b9?auto=format&fit=crop&w=400&q=80')">
-                <h3>Book a Meeting</h3>
-                <p>Schedule a time to talk with our team.</p>
-            </div>
-            <div class="scroll-item" style="background-image:url('https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80')">
-                <h3>Join Our Newsletter</h3>
-                <p>Stay updated with the latest news and events.</p>
-            </div>
-        </div>
-        <button class="scroll-btn right" onclick="scrollRow('contact-scroll2', 1)">&#8594;</button>
-    </div>
-    <!-- Repeat: Vertically separated sections -->
-    <div class="vertical-sections">
-        <div class="vertical-item" style="background-image:url('https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=400&q=80')">
-            <h3>Accessibility</h3>
-            <p>Our office and services are fully accessible.</p>
-        </div>
-        <div class="vertical-item" style="background-image:url('https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=400&q=80')">
-            <h3>Community Events</h3>
-            <p>Join us for upcoming workshops and events.</p>
+            <p>Monday - Friday<br>9:00 AM - 5:00 PM</p>
         </div>
     </div>
 </section>

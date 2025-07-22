@@ -1,8 +1,281 @@
+/* Import a modern, professional font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+html, body {
+  font-family: 'Inter', 'Segoe UI', 'Roboto', 'Arial', sans-serif;
+  font-size: 17px;
+  color: #23272f;
+  background: #f8fafc;
+  line-height: 1.7;
+  letter-spacing: 0.01em;
+}
+
+section {
+  background: #fff;
+  border-radius: 1.2em;
+  box-shadow: 0 2px 16px rgba(60,60,90,0.06);
+  padding: 2.2em 2.5em;
+  margin-bottom: 2.5em;
+}
+
+/* Headings */
+h1, .hero-title {
+  font-size: 2.3em;
+  font-weight: 700;
+  margin-bottom: 0.3em;
+  letter-spacing: 0.01em;
+}
+h2, .section-title {
+  font-size: 1.7em;
+  font-weight: 700;
+  margin-bottom: 0.7em;
+  letter-spacing: 0.01em;
+}
+h3 {
+  font-size: 1.25em;
+  font-weight: 600;
+  margin-bottom: 0.4em;
+}
+h4 {
+  font-size: 1.08em;
+  font-weight: 600;
+  margin-bottom: 0.3em;
+}
+
+/* Paragraphs and form elements */
+p, label, input, textarea, button {
+  font-size: 1em;
+  font-weight: 400;
+}
+
+/* Make paragraphs a bit larger for readability */
+p {
+  font-size: 1.08em;
+  margin-bottom: 1.1em;
+}
+
+/* Responsive adjustments */
+@media (max-width: 700px) {
+  section {
+    padding: 1.2em 0.7em;
+  }
+  h1, .hero-title {
+    font-size: 1.45em;
+  }
+  h2, .section-title {
+    font-size: 1.18em;
+  }
+  h3 {
+    font-size: 1.05em;
+  }
+  p {
+    font-size: 0.98em;
+  }
+}
+/* Absolutely position the NDIS badge at the top right of the hero section */
+.hero-section {
+  position: relative;
+}
+.hero-badge-absolute {
+  position: absolute;
+  top: 0.7em;
+  right: 1.5em;
+  background: #fffbe6;
+  color: #333;
+  border-radius: 1.2em;
+  padding: 0.3em 1.2em 0.3em 0.7em;
+  font-weight: 600;
+  font-size: 1em;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  display: flex;
+  align-items: center;
+  z-index: 2;
+}
+.hero-badge-absolute .hero-badge-icon {
+  margin-right: 0.5em;
+}
+/* Flex row for hero section to align badge right */
+.hero-flex-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  position: relative;
+}
+.hero-content {
+  display: flex;
+  gap: 2em;
+  margin: 2.5em 0 0 0;
+  justify-content: center;
+.hero-badge-right {
+  margin-left: 2em;
+  position: relative;
+  flex: 1 1 0%;
+  min-width: 260px;
+  max-width: 400px;
+  height: 220px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 1.5em;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+  box-shadow: 0 6px 24px rgba(60,60,90,0.13), 0 1.5px 6px rgba(0,0,0,0.07);
+  margin-bottom: 1.5em;
+    align-self: flex-start;
+  }
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(30,41,59,0.38) 60%, rgba(99,102,241,0.18) 100%);
+  z-index: 1;
+  top: 0.5em;
+  right: 1.5em;
+  position: relative;
+  z-index: 2;
+  color: #fff;
+  padding: 1.3em 1.7em 1.7em 1.7em;
+  width: 100%;
+  background: linear-gradient(0deg, rgba(30,41,59,0.62) 80%, rgba(30,41,59,0.12) 100%);
+  border-radius: 0 0 1.5em 1.5em;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  display: flex;
+  align-items: center;
+  margin: 0 0 0.5em 0;
+  font-size: 1.35em;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.13);
+  margin-right: 0.5em;
+}
+.cta-content p {
+  margin: 0;
+  font-size: 1.04em;
+  font-weight: 400;
+  text-shadow: 0 1.5px 6px rgba(0,0,0,0.13);
+}
+ .about-value-card p,
+@media (max-width: 900px) {
+  .simple-cta-sections {
+    flex-direction: column;
+    gap: 1.5em;
+    align-items: center;
+  }
+  .cta-item {
+    max-width: 95vw;
+    height: 180px;
+  }
+}
+.contact-card p,
+.highlight-item p {
+  margin-left: 2.2em;
+  text-indent: 0;
+  max-width: 700px;
+}
+/* Indent section content for all pages for a more stylish look */
+.service-item p,
+.motto-item p,
+.about-value-card p,
+.contact-card p,
+.highlight-item p {
+  margin-left: 2.2em;
+  text-indent: 0;
+  max-width: 700px;
+}
+/* Indent service descriptions for a modern, stylish look */
+.service-item p {
+  margin-left: 2.2em;
+  text-indent: 0;
+  max-width: 700px;
+}
+/* Indent service descriptions for a modern, stylish look */
+.service-item p {
+  margin-left: 2.2em;
+  text-indent: 0;
+  max-width: 700px;
+}
+/* Force service code and title inline for all browsers */
+.service-item h3, .service-item h3 .service-code {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 0.5em !important;
+  vertical-align: middle !important;
+}
+.service-code {
+  display: inline-block !important;
+  background: #f0f4fa;
+  color: #2a4d8f;
+  font-weight: bold;
+  border-radius: 0.4em;
+  padding: 0.1em 0.6em;
+  font-size: 0.95em;
+  margin-right: 0.5em;
+  letter-spacing: 0.03em;
+  vertical-align: middle !important;
+}
+/* Service code inline badge styling for services.html */
+.service-item h3 {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  font-size: 1.15em;
+  margin-bottom: 0.3em;
+}
+
+.service-code {
+  display: inline-block;
+  background: #f0f4fa;
+  color: #2a4d8f;
+  font-weight: bold;
+  border-radius: 0.4em;
+  padding: 0.1em 0.6em;
+  font-size: 0.95em;
+  margin-right: 0.5em;
+  letter-spacing: 0.03em;
+}
+/* Import modern fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap');
+
+/* CSS Custom Properties for consistent theming */
+:root {
+    --primary-color: #0057b8;
+    --primary-light: #3b82f6;
+    --primary-dark: #003974;
+    --accent-color: #6366f1;
+    --accent-light: #a855f7;
+    --success-color: #10b981;
+    --warning-color: #f59e0b;
+    --error-color: #ef4444;
+    --text-primary: #1f2937;
+    --text-secondary: #6b7280;
+    --text-muted: #9ca3af;
+    --bg-primary: #ffffff;
+    --bg-secondary: #f8fafc;
+    --bg-tertiary: #f1f5f9;
+    --border-light: #e2e8f0;
+    --border-medium: #cbd5e1;
+    --shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    --radius-sm: 6px;
+    --radius-md: 8px;
+    --radius-lg: 12px;
+    --radius-xl: 16px;
+    --radius-2xl: 24px;
+}
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    background: #f7f7f7;
+    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+    color: var(--text-primary);
+    line-height: 1.6;
+    font-size: 16px;
+    scroll-behavior: smooth;
+    min-height: 100vh;
 }
 header {
     background: #f5f6fa;
@@ -412,6 +685,476 @@ body[data-theme="dark"] .theme-toggle:hover {
         position: relative;
     }
 }
+/* Hero Section Styles */
+.hero-section {
+    text-align: center;
+    margin-bottom: 3rem;
+    padding: 2rem 1rem;
+    background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-lg);
+}
+
+.hero-badge {
+    display: inline-block;
+    background: linear-gradient(135deg, var(--accent-color) 0%, var(--accent-light) 100%);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: var(--radius-2xl);
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+    box-shadow: var(--shadow-md);
+    animation: fadeInUp 0.6s ease-out;
+}
+
+.hero-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin: 0 0 1rem 0;
+    line-height: 1.2;
+    animation: fadeInUp 0.8s ease-out;
+}
+
+.brand-highlight {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 800;
+}
+
+.hero-subtitle {
+    font-size: 1.3rem;
+    color: var(--text-secondary);
+    margin: 0 0 1.5rem 0;
+    font-weight: 500;
+    animation: fadeInUp 1s ease-out;
+}
+
+.hero-description {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    line-height: 1.7;
+    max-width: 600px;
+    margin: 0 auto;
+    animation: fadeInUp 1.2s ease-out;
+}
+
+/* Motto Section Styles */
+.motto-section {
+    margin: 3rem 0;
+}
+
+.section-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2rem;
+    font-weight: 600;
+    text-align: center;
+    color: var(--text-primary);
+    margin: 0 0 2rem 0;
+}
+
+.motto-card {
+    background: var(--bg-primary);
+    border-radius: var(--radius-xl);
+    padding: 2rem;
+    box-shadow: var(--shadow-lg);
+    border: 1px solid var(--border-light);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.motto-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-xl);
+}
+
+.motto-quote {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 2rem;
+    padding: 1rem;
+    background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-tertiary) 100%);
+    border-radius: var(--radius-lg);
+    border-left: 4px solid var(--accent-color);
+}
+
+.motto-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.motto-item {
+    text-align: center;
+    padding: 1.5rem;
+    background: var(--bg-secondary);
+    border-radius: var(--radius-lg);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid var(--border-light);
+}
+
+.motto-item:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+.motto-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.motto-item h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    margin: 0 0 1rem 0;
+}
+
+.motto-item p {
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Animation Keyframes */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Dark Theme Support for New Components */
+body[data-theme="dark"] .hero-section {
+    background: linear-gradient(135deg, #232a36 0%, #181c24 100%);
+}
+
+body[data-theme="dark"] .hero-title {
+    color: #e0e6ed;
+}
+
+body[data-theme="dark"] .hero-subtitle,
+body[data-theme="dark"] .hero-description {
+    color: #b3c0d1;
+}
+
+body[data-theme="dark"] .section-title {
+    color: #e0e6ed;
+}
+
+body[data-theme="dark"] .motto-card {
+    background: #232a36;
+    border-color: #353945;
+}
+
+body[data-theme="dark"] .motto-quote {
+    background: linear-gradient(135deg, #181c24 0%, #232a36 100%);
+    color: #ffe082;
+}
+
+body[data-theme="dark"] .motto-item {
+    background: #181c24;
+    border-color: #353945;
+}
+
+body[data-theme="dark"] .motto-item h3 {
+    color: #ffe082;
+}
+
+body[data-theme="dark"] .motto-item p {
+    color: #b3c0d1;
+}
+
+/* Responsive Design for New Components */
+@media (max-width: 800px) {
+    .hero-title {
+        font-size: 2rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .motto-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .motto-quote {
+        font-size: 1.2rem;
+    }
+    
+    .section-title {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 500px) {
+    .hero-section {
+        padding: 1.5rem 0.5rem;
+    }
+    
+    .hero-title {
+        font-size: 1.5rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+    
+    .motto-card {
+        padding: 1rem;
+    }
+    
+    .motto-quote {
+        font-size: 1rem;
+        padding: 0.5rem;
+    }
+}
+
+/* Values Section Styles */
+.values-section {
+    margin: 3rem 0;
+}
+
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.value-item {
+    background: var(--bg-primary);
+    padding: 2rem;
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-lg);
+    border: 1px solid var(--border-light);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+.value-item:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-xl);
+}
+
+.value-icon {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    display: block;
+}
+
+.value-item h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    margin: 0 0 1.5rem 0;
+}
+
+.value-item p {
+    color: var(--text-secondary);
+    line-height: 1.7;
+    margin: 0;
+    text-align: left;
+}
+
+/* Mission Vision Cards */
+.mission-vision {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 3rem 0;
+}
+
+.mission-card,
+.vision-card {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%);
+    color: white;
+    padding: 2.5rem 2rem;
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-lg);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+.mission-card:hover,
+.vision-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-xl);
+}
+
+.card-icon {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    display: block;
+    opacity: 0.9;
+}
+
+.mission-card h3,
+.vision-card h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin: 0 0 1.5rem 0;
+}
+
+.mission-card p,
+.vision-card p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin: 0;
+    opacity: 0.95;
+    text-align: left;
+}
+
+/* What Sets Us Apart */
+.what-sets-us-apart {
+    margin: 3rem 0;
+}
+
+.apart-card {
+    background: var(--bg-primary);
+    padding: 2.5rem;
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-lg);
+    border: 1px solid var(--border-light);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    border-left: 6px solid var(--accent-color);
+}
+
+.apart-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-xl);
+}
+
+.apart-icon {
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+    display: block;
+}
+
+.apart-card h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    margin: 0 0 1.5rem 0;
+}
+
+.apart-card p {
+    color: var(--text-secondary);
+    line-height: 1.8;
+    margin: 0;
+    font-size: 1.1rem;
+    text-align: left;
+}
+
+/* Dark Theme Support for About Page Components */
+body[data-theme="dark"] .value-item {
+    background: #232a36;
+    border-color: #353945;
+}
+
+body[data-theme="dark"] .value-item h3 {
+    color: #ffe082;
+}
+
+body[data-theme="dark"] .value-item p {
+    color: #b3c0d1;
+}
+
+body[data-theme="dark"] .mission-card,
+body[data-theme="dark"] .vision-card {
+    background: linear-gradient(135deg, #232a36 0%, #181c24 100%);
+    border: 1px solid #353945;
+}
+
+body[data-theme="dark"] .apart-card {
+    background: #232a36;
+    border-color: #353945;
+    border-left-color: #ffe082;
+}
+
+body[data-theme="dark"] .apart-card h3 {
+    color: #ffe082;
+}
+
+body[data-theme="dark"] .apart-card p {
+    color: #b3c0d1;
+}
+
+/* Responsive Design for About Page */
+@media (max-width: 800px) {
+    .values-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .mission-vision {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .value-item,
+    .mission-card,
+    .vision-card,
+    .apart-card {
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 500px) {
+    .value-item,
+    .mission-card,
+    .vision-card,
+    .apart-card {
+        padding: 1rem;
+    }
+    
+    .value-icon,
+    .card-icon,
+    .apart-icon {
+        font-size: 2.5rem;
+    }
+    
+    .value-item h3,
+    .mission-card h3,
+    .vision-card h3 {
+        font-size: 1.3rem;
+    }
+    
+    .apart-card h3 {
+        font-size: 1.5rem;
+    }
+}
+
 /* Contact form styles for modern, accessible, and cohesive look */
 .contact-form {
     background: #f5f6fa;

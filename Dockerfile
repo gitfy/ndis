@@ -1,11 +1,12 @@
 # Use an official Nginx image to serve static content
 FROM nginx:alpine
-COPY index.html /usr/share/nginx/html/index.html
-COPY style.css /usr/share/nginx/html/style.css
-COPY script.js /usr/share/nginx/html/script.js
-COPY home.html /usr/share/nginx/html/home.html
-COPY personal.html /usr/share/nginx/html/personal.html
-COPY community.html /usr/share/nginx/html/community.html
-COPY support.html /usr/share/nginx/html/support.html
-COPY contact.html /usr/share/nginx/html/contact.html
+
+# Copy all website files to nginx html directory
+COPY *.html /usr/share/nginx/html/
+COPY *.css /usr/share/nginx/html/
+COPY *.js /usr/share/nginx/html/
+
+# Create a simple nginx config for better SPA support
+RUN echo 'server { listen 80; server_name localhost; location / { root /usr/share/nginx/html; index index.html; try_files $uri $uri/ /index.html; } }' > /etc/nginx/conf.d/default.conf
+
 EXPOSE 80
