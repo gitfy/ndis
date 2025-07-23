@@ -1,0 +1,33 @@
+/* Contact page grid layout styles */
+.contact-info-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.contact-card {
+    margin-bottom: 0; /* Override default margin since we're using grid gap */
+}
+
+.contact-card .contact-icon svg {
+    stroke: #a9c1e8; /* Update icon color to match dark theme */
+}
+
+#contact .section-title,
+#contact h2 {
+    text-align: left; /* Left-align section titles in contact page */
+}
+
+/* Make form a bit narrower to match grid layout */
+.contact-form {
+    max-width: 100%;
+    margin: 2rem 0;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .contact-info-grid {
+        grid-template-columns: 1fr; /* Single column on mobile */
+    }
+}

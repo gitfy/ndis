@@ -1,9 +1,17 @@
 function showTab(tabId) {
-    // Remove active class from all tabs
-    document.querySelectorAll('.tab').forEach(tab => tab.classList.remove('active'));
-    // Add active class to selected tab
-    const tabElement = document.querySelector(`.tab[onclick*='${tabId}']`);
-    if (tabElement) tabElement.classList.add('active');
+    // Update tab states and ARIA attributes
+    document.querySelectorAll('.tab').forEach(tab => {
+        const link = tab.querySelector('a');
+        tab.classList.remove('active');
+        link.setAttribute('aria-selected', 'false');
+    });
+    
+    // Add active class to selected tab and update ARIA
+    const tabLink = document.querySelector(`.tab a[onclick*='${tabId}']`);
+    if (tabLink) {
+        tabLink.parentElement.classList.add('active');
+        tabLink.setAttribute('aria-selected', 'true');
+    }
     // Compute base path for fetching tab content
     let base = '';
     if (window.location.hostname.endsWith('github.io')) {
@@ -45,18 +53,58 @@ function showTab(tabId) {
     }
 }
 
+// Set up keyboard navigation for tabs
+function setupTabKeyboardNavigation() {
+    const tabLinks = document.querySelectorAll('.tab a[role="tab"]');
+    
+    tabLinks.forEach(link => {
+        link.addEventListener('keydown', (e) => {
+            const tabs = Array.from(tabLinks);
+            const index = tabs.indexOf(e.target);
+            
+            switch(e.key) {
+                case 'ArrowRight':
+                    // Move to next tab, or first tab if at end
+                    const nextIndex = (index + 1) % tabs.length;
+                    const nextTab = tabs[nextIndex].getAttribute('onclick').match(/'([^']+)'/)[1];
+                    showTab(nextTab);
+                    e.preventDefault();
+                    break;
+                case 'ArrowLeft':
+                    // Move to previous tab, or last tab if at beginning
+                    const prevIndex = (index - 1 + tabs.length) % tabs.length;
+                    const prevTab = tabs[prevIndex].getAttribute('onclick').match(/'([^']+)'/)[1];
+                    showTab(prevTab);
+                    e.preventDefault();
+                    break;
+                case 'Home':
+                    // Move to first tab
+                    const firstTab = tabs[0].getAttribute('onclick').match(/'([^']+)'/)[1];
+                    showTab(firstTab);
+                    e.preventDefault();
+                    break;
+                case 'End':
+                    // Move to last tab
+                    const lastTab = tabs[tabs.length - 1].getAttribute('onclick').match(/'([^']+)'/)[1];
+                    showTab(lastTab);
+                    e.preventDefault();
+                    break;
+            }
+        });
+    });
+}
+
 // Set default tab on load
 window.onload = function() {
-    const icon = document.getElementById('theme-icon');
-    const theme = localStorage.getItem('theme');
-    if (theme === 'light') {
-        document.body.removeAttribute('data-theme');
-        icon.textContent = '🌙';
-    } else {
-        document.body.setAttribute('data-theme', 'dark');
-        icon.textContent = '☀️';
-    }
+    // Always set dark theme
+    document.body.setAttribute('data-theme', 'dark');
+    
+    // Initialize the first tab
     showTab('home');
+    
+    // Setup keyboard navigation
+    setupTabKeyboardNavigation();
+    
     // Setup dots for all horizontal scrolls on load
     setupDots('community-scroll', 'community-scroll-dots');
     setupDots('community-scroll2', 'community-scroll2-dots');
@@ -109,19 +157,7 @@ function scrollRow(rowId, direction) {
     }
 }
 
-function toggleTheme() {
-    const body = document.body;
-    const icon = document.getElementById('theme-icon');
-    if (body.getAttribute('data-theme') === 'dark') {
-        body.removeAttribute('data-theme');
-        icon.textContent = '🌙';
-        localStorage.setItem('theme', 'light');
-    } else {
-        body.setAttribute('data-theme', 'dark');
-        icon.textContent = '☀️';
-        localStorage.setItem('theme', 'dark');
-    }
-}
+// Theme function removed - site always uses dark theme
 
 function toggleMenu() {
     const tabs = document.querySelector('nav ul.tabs');

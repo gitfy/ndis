@@ -5,20 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SEMS NDIS Services</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style_contact.css">
 </head>
 <body>
     <header>
         <h1>SEMS NDIS Services</h1>
-        <nav>
-            <ul class="tabs">
-                <li class="tab active" onclick="showTab('home')">Home</li>
-                <li class="tab" onclick="showTab('about')">About SEMS</li>
-                <li class="tab" onclick="showTab('approach')">Our Approach</li>
-                <li class="tab" onclick="showTab('services')">Services</li>
-                <li class="tab" onclick="showTab('contact')">Contact</li>
+        <nav aria-label="Main Navigation">
+            <ul class="tabs" role="tablist">
+                <li class="tab active" role="presentation"><a href="#home" onclick="showTab('home'); return false;" role="tab" aria-selected="true" aria-controls="main-content">Home</a></li>
+                <li class="tab" role="presentation"><a href="#about" onclick="showTab('about'); return false;" role="tab" aria-selected="false" aria-controls="main-content">About SEMS</a></li>
+                <li class="tab" role="presentation"><a href="#approach" onclick="showTab('approach'); return false;" role="tab" aria-selected="false" aria-controls="main-content">Our Approach</a></li>
+                <li class="tab" role="presentation"><a href="#services" onclick="showTab('services'); return false;" role="tab" aria-selected="false" aria-controls="main-content">Services</a></li>
+                <li class="tab" role="presentation"><a href="#contact" onclick="showTab('contact'); return false;" role="tab" aria-selected="false" aria-controls="main-content">Contact</a></li>
             </ul>
         </nav>
-        <button class="theme-toggle" onclick="toggleTheme()" aria-label="Switch theme"><span id="theme-icon">🌙</span></button>
         <button class="hamburger" onclick="toggleMenu()" aria-label="Open menu">&#9776;</button>
     </header>
     <main id="main-content">
