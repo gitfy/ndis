@@ -285,6 +285,17 @@ p {
   gap: 0.5em;
   font-size: 1.15em;
   margin-bottom: 0.3em;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+}
+
+/* Media query for mobile service titles */
+@media (max-width: 768px) {
+  .service-item h3 {
+    font-size: 1em;
+    padding: 0 10px;
+  }
 }
 
 .service-code {
